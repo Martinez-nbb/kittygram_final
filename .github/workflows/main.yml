@@ -31,14 +31,14 @@ jobs:
         ruff check backend/
         ruff format --check backend/
 
-  - name: Run backend tests
-    run: |
-      cd backend
-      python manage.py test
-    env:
-      SECRET_KEY: "django-insecure-ci-key-12345"
-      DEBUG: "False"
-      ALLOWED_HOSTS: "localhost,127.0.0.1"
+    - name: Run backend tests
+      run: |
+        cd backend
+        python manage.py test
+      env:
+        SECRET_KEY: "django-insecure-ci-key-12345"
+        DEBUG: "False"
+        ALLOWED_HOSTS: "localhost,127.0.0.1"
 
     - name: Run tests for backend
       run: |
