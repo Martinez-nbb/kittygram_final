@@ -31,9 +31,6 @@ jobs:
         ruff check backend/
         ruff format --check backend/
 
-    - name: Check style with pycodestyle
-      run: pycodestyle backend/
-
     - name: Run tests for backend
       run: |
         cd backend
